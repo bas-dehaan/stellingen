@@ -2,12 +2,12 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_gravity="center_horizontal"
-    android:layout_marginTop="25sp"
+    android:layout_marginTop="100sp"
     android:layout_marginHorizontal="25sp"
-    android:layout_marginBottom="100sp"
+    android:layout_marginBottom="110sp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E339">
+    android:background="@color/colorPrimary">
 
     <TextView
         android:id="@+id/stelling"
@@ -18,22 +18,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10sp" />
-
-    <View
-        android:id="@+id/item_swipe_left_indicator"
-        android:alpha="0"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_margin="10dp"
-        android:background="#A5F" />
-
-    <View
-        android:id="@+id/item_swipe_right_indicator"
-        android:alpha="0"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_margin="10dp"
-        android:layout_gravity="right"
-        android:background="#5AF" />
 
 </FrameLayout>

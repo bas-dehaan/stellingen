@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Stellingen</string>
+    <string name="ja">Ja</string>
+    <string name="nee">Nee</string>
+
+    <!-- Stellingen -->
+    <string name="stelling0">test</string>
 </resources>
