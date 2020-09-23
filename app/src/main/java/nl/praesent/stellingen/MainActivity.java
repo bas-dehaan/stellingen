@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -90,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
                 //arrayAdapter.notifyDataSetChanged();
                 //Log.d("LIST", "notified");
                 //i++;
-
             }
 
             @Override
@@ -100,11 +100,21 @@ public class MainActivity extends AppCompatActivity {
 
         // Indien op de button @id.right geklikt wordt, behandel het als een swipe naar rechts
         Button bRight = findViewById(R.id.right);
-        bRight.setOnClickListener(v -> flingContainer.getTopCardListener().selectRight());
+        bRight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                flingContainer.getTopCardListener().selectRight();
+            }
+        });
 
         // Indien op de button @id.left geklikt wordt, behandel het als een swipe naar links
         Button bLeft = findViewById(R.id.left);
-        bLeft.setOnClickListener(v -> flingContainer.getTopCardListener().selectLeft());
+        bLeft.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                flingContainer.getTopCardListener().selectLeft();
+            }
+        });
 
     }
 
@@ -128,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
                 mCountdownText.setText("NU!");
             }
         };
+        // Cancel een evt. nog lopende countdown en start een nieuwe
         mCountdown.cancel();
         mCountdown.start();
     }
